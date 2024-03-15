@@ -1,0 +1,115 @@
+package quilatanact5;
+
+import java.util.Scanner;
+
+public class QuilatanAct5 {
+	
+	private static final String validPIN = "0000";
+	private static final String validPUK = "12345678";
+	private static final int maxAttempts = 3;
+
+	public static void main(String[] args) 
+	{
+		Scanner scn = new Scanner(System.in);
+
+		int pinAttempts = 0;
+		int pukAttempts = 0;
+
+		System.out.println("===== Sir Jay Telecom =====");
+		System.out.print("Please Enter your SIM card PIN Number: ");
+
+		while (pinAttempts < maxAttempts) 
+		{
+			String pin = scn.nextLine();
+				
+			if (pin.equals(validPIN)) 
+			{
+				System.out.println("=====Welcome to Sir Jay Telecom=====");
+				System.out.println("***A Telecom that Always On-Line***");
+				System.out.println("╔═══════════════════\r\n"
+                                                    + "║ 10:00AM☻              ◄◄ ║\r\n"
+                                                    + "║                           ║\r\n"
+                                                    + "║       A Telecom that      ║\r\n"
+                                                    + "║       Always On-Line      ║\r\n"
+                                                    + "║      Call and Text Na!    ║\r\n"
+                                                    + "║                           ║\r\n"
+                                                    + "║                           ║\r\n"
+                                                    + "║                           ║\r\n"
+                                                    + "║                           ║\r\n"
+                                                    + "╚═════════════════║\r\n"
+                                                    + "║                           ║\r\n"
+                                                    + "║    [ 1 ] [ 2 ] [ 3 ]      ║\r\n"
+                                                    + "║    [ 4 ] [ 5 ] [ 6 ]      ║\r\n"
+                                                    + "║    [ 7 ] [ 8 ] [ 9 ]      ║\r\n"
+                                                    + "║    [ * ] [ 0 ] [ # ]      ║\r\n"
+                                                    + "╚═════════════════╝ \r\n");
+			} 
+			else 
+			{
+				pinAttempts++;
+				if (pinAttempts == maxAttempts)
+			{
+				break;
+			}
+				System.out.println("Invalid PIN");
+				System.out.print("Please Enter your SIM card PIN Number: ");
+			}
+		}
+
+		System.out.print("Enter your PUK code: ");
+
+		while (pukAttempts < maxAttempts) 
+		{
+			String puk = scn.nextLine();
+			
+			if (puk.equals(validPUK)) 
+			{
+				System.out.println("╔═════════════════\r\n"
+						 + "║ 10:00AM☻              ◄◄ ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║       A Telecom that      ║\r\n"
+						 + "║       Always On-Line      ║\r\n"
+						 + "║      Call and Text Na!    ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║                           ║\r\n"
+						 + "╚═════════════════\r\n"
+						 + "║                           ║\r\n"
+						 + "║    [ 1 ] [ 2 ] [ 3 ]      ║\r\n"
+						 + "║    [ 4 ] [ 5 ] [ 6 ]      ║\r\n"
+						 + "║    [ 7 ] [ 8 ] [ 9 ]      ║\r\n"
+						 + "║    [ * ] [ 0 ] [ # ]      ║\r\n"
+						 + "╚═════════════════╝\r\n");
+			} 
+			else 
+			{
+				pukAttempts++;
+				if (pukAttempts == maxAttempts) 
+			{
+				System.out.println("SIM BLOCKED");
+				System.out.println("╔════════════════╗\r\n"
+						 + "║ 10:00AM☻                ◄║\r\n"
+						 + "║                           ║\r\n"
+						 + "║       You are BUSTED!     ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║   ☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺  ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║                           ║\r\n"
+						 + "║                           ║\r\n"
+						 + "╚═════════════════╝\r\n"
+						 + "║                           ║\r\n"
+						 + "║    [ 1 ] [ 2 ] [ 3 ]      ║\r\n"
+						 + "║    [ 4 ] [ 5 ] [ 6 ]      ║\r\n"
+						 + "║    [ 7 ] [ 8 ] [ 9 ]      ║\r\n"
+						 + "║    [ * ] [ 0 ] [ # ]      ║\r\n"
+						 + "╚═════════════════╝\r\n");
+				break;
+			}
+				System.out.println("Invalid PUK Code");
+				System.out.print("Enter your PUK code: ");
+			}
+		}
+	}
+}
